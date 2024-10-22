@@ -1,4 +1,4 @@
-package com.example.gastosgestor.ui.theme
+package com.example.ventasgestor.ui.theme
 
 import androidx.compose.ui.graphics.Color
 

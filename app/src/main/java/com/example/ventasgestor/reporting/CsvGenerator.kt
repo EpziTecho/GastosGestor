@@ -1,8 +1,8 @@
-package com.example.gastosgestor.csv
+package com.example.ventasgestor.csv
 
 import android.content.Context
 import android.os.Environment
-import com.example.gastosgestor.data.model.Producto
+import com.example.ventasgestor.data.model.Producto
 import java.io.File
 import java.io.FileWriter
 import java.io.IOException

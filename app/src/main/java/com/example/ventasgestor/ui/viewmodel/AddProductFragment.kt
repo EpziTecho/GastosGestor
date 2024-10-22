@@ -5,14 +5,14 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.google.firebase.firestore.FirebaseFirestore
-import com.example.gastosgestor.csv.CsvGenerator
-import com.example.gastosgestor.data.model.Producto
-import com.example.gastosgestor.databinding.FragmentAddProductBinding
-import com.example.gastosgestor.ui.viewmodel.ProductViewModel
-import com.example.gastosgestor.ui.viewmodel.ProductViewModelFactory
-import com.example.gastosgestor.data.repository.ProductRepository
+import com.example.ventasgestor.csv.CsvGenerator
+import com.example.ventasgestor.data.model.Producto
+import com.example.ventasgestor.databinding.FragmentAddProductBinding
+import com.example.ventasgestor.ui.viewmodel.ProductViewModel
+import com.example.ventasgestor.ui.viewmodel.ProductViewModelFactory
+import com.example.ventasgestor.data.repository.ProductRepository
 import androidx.lifecycle.ViewModelProvider
-import com.example.gastosgestor.ui.view.MainActivity
+import com.example.ventasgestor.ui.view.MainActivity
 
 class AddProductFragment : Fragment() {
 

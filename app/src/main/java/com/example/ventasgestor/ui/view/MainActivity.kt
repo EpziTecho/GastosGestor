@@ -1,14 +1,14 @@
-package com.example.gastosgestor.ui.view
+package com.example.ventasgestor.ui.view
 
 import AddProductFragment
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.gastosgestor.R
-import com.example.gastosgestor.databinding.ActivityMainBinding
-import com.example.gastosgestor.ui.adapter.ProductAdapter
-import com.example.gastosgestor.data.model.Producto
+import com.example.ventasgestor.R
+import com.example.ventasgestor.databinding.ActivityMainBinding
+import com.example.ventasgestor.adapter.ProductAdapter
+import com.example.ventasgestor.data.model.Producto
 import com.google.firebase.firestore.FirebaseFirestore
 import androidx.fragment.app.commit
 

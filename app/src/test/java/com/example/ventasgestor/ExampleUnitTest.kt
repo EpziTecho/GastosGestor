@@ -1,4 +1,4 @@
-package com.example.gastosgestor
+package com.example.ventasgestor
 
 import org.junit.Test
 

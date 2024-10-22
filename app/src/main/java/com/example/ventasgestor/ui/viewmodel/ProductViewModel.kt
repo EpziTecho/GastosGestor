@@ -1,11 +1,11 @@
-package com.example.gastosgestor.ui.viewmodel
+package com.example.ventasgestor.ui.viewmodel
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.gastosgestor.data.model.Producto
-import com.example.gastosgestor.data.repository.ProductRepository
+import com.example.ventasgestor.data.model.Producto
+import com.example.ventasgestor.data.repository.ProductRepository
 import kotlinx.coroutines.launch
 
 class ProductViewModel(private val productRepository: ProductRepository) : ViewModel() {

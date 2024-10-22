@@ -5,11 +5,11 @@ plugins {
 }
 
 android {
-    namespace 'com.example.gastosgestor'
+    namespace 'com.example.ventasgestor'
     compileSdk 34
 
     defaultConfig {
-        applicationId "com.example.gastosgestor"
+        applicationId 'com.example.ventasgestor'
         minSdk 33
         targetSdk 34
         versionCode 1

@@ -1,7 +1,7 @@
-package com.example.gastosgestor.data.repository
+package com.example.ventasgestor.data.repository
 
 import android.net.Uri
-import com.example.gastosgestor.data.model.Producto
+import com.example.ventasgestor.data.model.Producto
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.storage.FirebaseStorage
 import kotlinx.coroutines.tasks.await

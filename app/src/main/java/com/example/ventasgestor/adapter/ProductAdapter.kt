@@ -1,12 +1,12 @@
-package com.example.gastosgestor.ui.adapter
+package com.example.ventasgestor.adapter
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.example.gastosgestor.R
-import com.example.gastosgestor.data.model.Producto
+import com.example.ventasgestor.R
+import com.example.ventasgestor.data.model.Producto
 
 class ProductAdapter(private var productos: List<Producto>) :
     RecyclerView.Adapter<ProductAdapter.ProductViewHolder>() {

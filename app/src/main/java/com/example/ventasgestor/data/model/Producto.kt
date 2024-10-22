@@ -1,4 +1,4 @@
-package com.example.gastosgestor.data.model
+package com.example.ventasgestor.data.model
 
 data class Producto(
     var id: String = "",
