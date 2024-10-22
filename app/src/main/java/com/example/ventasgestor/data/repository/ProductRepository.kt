@@ -27,48 +27,26 @@ class ProductRepository {
         }
     }
 
-    // Método para obtener todos los productos
-    suspend fun obtenerProductos(): List<Producto> {
-        return try {
-            val snapshot = coleccionProductos.get().await()
-            snapshot.toObjects(Producto::class.java)
-        } catch (e: Exception) {
-            e.printStackTrace()
-            emptyList()
-        }
-    }
 
-    // Método para obtener un producto por su id
-    suspend fun obtenerProductoPorId(id: String): Producto? {
+    // Método para subir una imagen a Firebase Storage
+    suspend fun subirImagenProducto(uriImagen: Uri): String? {
         return try {
-            val snapshot = coleccionProductos.document(id).get().await()
-            snapshot.toObject(Producto::class.java)
+            // Crear una referencia de almacenamiento con un nombre único para la imagen
+            val referenciaAlmacenamiento = almacenamiento.reference.child("imagenes/${System.currentTimeMillis()}.jpg")
+
+            // Subir el archivo al almacenamiento
+            referenciaAlmacenamiento.putFile(uriImagen).await()
+
+            // Obtener la URL de descarga de la imagen subida
+            val urlImagen = referenciaAlmacenamiento.downloadUrl.await().toString()
+
+            // Devolver la URL de la imagen
+            urlImagen
         } catch (e: Exception) {
             e.printStackTrace()
             null
-        }
-    }
-
-    // Método para subir una foto a Firebase Storage
-    suspend fun subirImagenProducto(idProducto: String, uriImagen: String): String? {
-        return try {
-            val referenciaAlmacenamiento = almacenamiento.reference.child("imagenes_productos/$idProducto.jpg")
-            referenciaAlmacenamiento.putFile(Uri.parse(uriImagen)).await()
-            referenciaAlmacenamiento.downloadUrl.await().toString()
-        } catch (e: Exception) {
-            e.printStackTrace()
-            null
-        }
-    }
-
-    // Método para eliminar un producto
-    suspend fun eliminarProducto(id: String): Boolean {
-        return try {
-            coleccionProductos.document(id).delete().await()
-            true
-        } catch (e: Exception) {
-            e.printStackTrace()
-            false
         }
     }
 }
+
+

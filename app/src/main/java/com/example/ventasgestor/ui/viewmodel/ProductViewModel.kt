@@ -1,5 +1,6 @@
 package com.example.ventasgestor.ui.viewmodel
 
+import android.net.Uri
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -14,14 +15,26 @@ class ProductViewModel(private val productRepository: ProductRepository) : ViewM
     private val _agregarExitoso = MutableLiveData<Boolean>()
     val agregarExitoso: LiveData<Boolean> get() = _agregarExitoso
 
-    // Método para agregar un producto
-    fun agregarProducto(producto: Producto) {
+    // Método para agregar un producto con imagen
+    fun agregarProducto(producto: Producto, uriImagen: Uri?) {
         viewModelScope.launch {
             try {
-                productRepository.agregarProducto(producto)
-                _agregarExitoso.postValue(true)  // Notificar éxito
+                // Si hay una imagen, primero subirla a Firebase Storage
+                val urlImagen = uriImagen?.let {
+                    productRepository.subirImagenProducto(it) // Subir la imagen y obtener la URL
+                } ?: ""
+
+                // Actualizar el producto con la URL de la imagen
+                val productoConImagen = producto.copy(fotoUrl = urlImagen)
+
+                // Luego, agregar el producto a Firestore
+                productRepository.agregarProducto(productoConImagen)
+
+                // Notificar éxito
+                _agregarExitoso.postValue(true)
             } catch (e: Exception) {
-                _agregarExitoso.postValue(false)  // Notificar error
+                // Notificar error
+                _agregarExitoso.postValue(false)
             }
         }
     }
