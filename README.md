@@ -1,6 +1,6 @@
 # Proyecto EpziGastosGestor v.1.0.0
 
-Este es un proyecto para gestionar ventas.
+Este es un proyecto para gestionar gastos.
 
 ## Captura de Pantalla de la idea
 
