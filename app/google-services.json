@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "501209350994",
+    "project_id": "gestorventas-3a79b",
+    "storage_bucket": "gestorventas-3a79b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:501209350994:android:af957c10377ef42c77708b",
+        "android_client_info": {
+          "package_name": "com.example.ventasgestor"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDcFq52EIK6dbv2rRRDB-Ou8wnnW8zZ7Yg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
