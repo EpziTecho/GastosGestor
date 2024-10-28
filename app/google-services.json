@@ -12,7 +12,20 @@
           "package_name": "com.example.ventasgestor"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "501209350994-639m4agl2m0nbfgjlc2br8ktra9rla3v.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.ventasgestor",
+            "certificate_hash": "3c6d5b9380c0174ba660578f12e54fd664322b36"
+          }
+        },
+        {
+          "client_id": "501209350994-3pki79ug5n1qtg2ofbuan38t3jbnjjhi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyDcFq52EIK6dbv2rRRDB-Ou8wnnW8zZ7Yg"
@@ -20,7 +33,12 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "501209350994-3pki79ug5n1qtg2ofbuan38t3jbnjjhi.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         }
       }
     }

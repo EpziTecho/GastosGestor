@@ -8,22 +8,24 @@
     android:background="#F8F9FA">
 
     <!-- Título del formulario -->
-    <TextView
-        android:id="@+id/tvTituloFormulario"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Formulario de Producto"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        android:layout_marginBottom="16dp"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:gravity="center" />
 
     <!-- Imagen del Producto (redonda) -->
 
     <!-- CardView para Nombre del Producto -->
+
+    <TextView
+        android:id="@+id/tvTituloFormulario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="88dp"
+        android:gravity="center"
+        android:text="Formulario de Producto"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/ivImagenProducto"
@@ -168,10 +170,11 @@
         android:id="@+id/btnRegresar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="232dp"
-        android:text="Regresar"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btnAgregarProducto" />
+        android:text="REGRESAR"
+        app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    android:layout_marginBottom="16dp"
+    />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

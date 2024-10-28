@@ -7,7 +7,7 @@
     android:padding="16dp"
     >
 
-    <!-- FragmentContainerView para cargar el fragmento AddProductFragment -->
+    <!-- FragmentContainerView para cargar los fragmentos (AddProductFragment o cualquier otro) -->
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/fragment_container"
         android:layout_width="0dp"
@@ -15,7 +15,64 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="16dp"
+        />
+
+    <!-- Contenedor para la foto y el nombre del usuario (se ubica en la parte superior derecha) -->
+    <LinearLayout
+        android:id="@+id/profileLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="16dp">
+
+        <!-- Imagen de perfil del usuario -->
+        <ImageView
+            android:id="@+id/imageViewUsuario"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_launcher_background"
+            android:scaleType="centerCrop"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/circle_background" />
+
+        <!-- Nombre del usuario -->
+        <TextView
+            android:id="@+id/textViewNombreUsuario"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nombre del Usuario"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:gravity="center_vertical" />
+
+        <Button
+            android:id="@+id/btnCerrarSesion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cerrar Sesión"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@id/profileLayout"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="8dp" />
+
+        <!-- Botón para iniciar sesión con Google -->
+        <com.google.android.gms.common.SignInButton
+            android:id="@+id/signInButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_margin="16dp"
+            android:visibility="gone" />
+
+
+
+    </LinearLayout>
 
     <!-- TextView centrado y ubicado encima del RecyclerView -->
     <TextView
@@ -30,12 +87,9 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginBottom="16dp"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/profileLayout"
         android:layout_marginTop="16dp" />
-    <!-- Layout horizontal para mostrar Mes y Monto Total -->
 
-
-    <!-- RecyclerView para mostrar la lista de productos -->
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="0dp"
